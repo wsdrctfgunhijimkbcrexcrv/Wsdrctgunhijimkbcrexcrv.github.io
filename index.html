@@ -79,8 +79,6 @@
             border-left: 4px solid var(--primary-blue);
             border-radius: 4px;
         }
-        
-        /* NEW NUMBERS SECTION STYLING */
         .numbers-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -115,8 +113,6 @@
             color: #cbd5e1;
             margin-top: 0.25rem;
         }
-
-        /* Mud Flap Display Styling */
         .mudflap-container {
             display: flex;
             justify-content: center;
@@ -169,7 +165,6 @@
             text-align: center;
             font-style: italic;
         }
-        /* Gallery Section */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -205,6 +200,47 @@
             font-size: 0.9rem;
             box-sizing: border-box;
         }
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--primary-blue);
+        }
+        input, select, textarea {
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        .submit-btn {
+            grid-column: span 2;
+            background-color: var(--primary-blue);
+            color: var(--clean-white);
+            border: none;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            border-bottom: 4px solid var(--accent-gold);
+            margin-top: 1rem;
+        }
         footer {
             background-color: var(--primary-blue);
             color: var(--clean-white);
@@ -220,7 +256,8 @@
 
     <header>
         <div class="logo-placeholder">
-            <img src="IMG_2330.jpeg" alt="Sullivan's Ventures Ltd. Logo">
+            <!-- LOGO SRC LINK -->
+            <img src="logo.png" alt="Sullivan's Ventures Ltd. Logo">
         </div>
         <div class="slogan">"Built for the Grades. Driven by Torque."</div>
     </header>
@@ -247,7 +284,6 @@
             </div>
         </div>
 
-        <!-- NEW NUMBERS SECTION -->
         <div class="section">
             <h2>By the Numbers</h2>
             <p>Heavy-spec capability built to move maximum legal payload across demanding forestry lease routes.</p>
@@ -266,26 +302,30 @@
                     <div class="number-stat">4</div>
                     <div class="number-label">Trailer Axles</div>
                     <div class="number-desc">Quad-axle stinger engineered for maximum weight distribution</div>
+                    <!-- CUT HERE -->
+<h2>Gallery</h2>
+<div class="gallery-grid">
+
+  <div class="gallery-item">
+    <img 
+    src="bush-ready.png" 
+    alt="Truck 1">
+  </div>
+
+  <div class="gallery-item">
+    <img 
+    src="night-haul.png" 
+    alt="Truck 2">
+  </div>
+
+  <div class="gallery-item">
+    <img 
+    src="heavy-spec.png" 
+    alt="Truck 3">
+  </div>
+
+</div>
+<!-- END CUT -->
+
                 </div>
                 <div class="number-card">
-                    <div class="number-stat">6</div>
-                    <div class="number-label">Total Log Bunks</div>
-                    <div class="number-desc">2 wide frame-mounted & 4 standard trailer bunks for short wood</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Custom Fleet Mud Flaps</h2>
-            <p>Branded heavy-duty rubber protection designed to stay clean on muddy bush blocks and stand out on the highway.</p>
-            <div class="mudflap-container">
-                <div class="mudflap">
-                    <div class="mudflap-logo">
-                        <p class="mudflap-text-main">Sullivan's</p>
-                        <p class="mudflap-text-sub">Ventures Ltd.</p>
-                    </div>
-                    <p class="mudflap-slogan">Cranbrook, B.C.</p>
-                </div>
-                <div class="mudflap">
-                    <div class="mudflap-logo">
-                        <p class="mudflap-text-main">Sullivan's</p>
