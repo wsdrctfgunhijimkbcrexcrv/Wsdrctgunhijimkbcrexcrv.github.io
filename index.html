@@ -3,60 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sullivan Ventures Ltd. | Elite BC Forestry Transport</title>
+    <title>Sullivan's Ventures Ltd. | Heavy Haul Logging</title>
     <style>
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #1a2530; }
-        header { background-color: #0b2240; color: #ffffff; text-align: center; padding: 2.5rem 1rem; border-bottom: 5px solid #000000; }
-        .logo-container { max-width: 500px; margin: 0 auto 1rem auto; background: transparent; padding: 5px; }
-        .logo-container img { width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); margin: 0 auto; }
-        header p { font-size: 1.2rem; margin: 12px 0 0 0; color: #d1dbe5; font-style: italic; font-weight: bold; letter-spacing: 0.5px; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: #ffffff; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #0b2240; }
-        h2 { color: #0b2240; margin-top: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.3rem; letter-spacing: 0.5px; }
-        ul { list-style-type: none; padding: 0; }
-        li { padding: 0.5rem 0; border-bottom: 1px solid #edf2f7; font-size: 1.1rem; }
-        li strong { color: #0b2240; }
-        .btn { display: block; background-color: #0b2240; color: white; text-align: center; padding: 1rem; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.2rem; margin-top: 1rem; transition: background 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
-        .btn:hover { background-color: #000000; }
-        footer { text-align: center; padding: 2rem; color: #718096; font-size: 0.9rem; }
+        :root {
+            --primary-blue: #0A2342;
+            --accent-gold: #D4AF37;
+            --clean-white: #FFFFFF;
+            --dark-gray: #1E1E1E;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: var(--dark-gray);
+        }
+        header {
+            background-color: var(--primary-blue);
+            color: var(--clean-white);
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+        .logo-placeholder {
+            max-width: 350px;
+            margin: 0 auto 1.5rem auto;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo-placeholder img {
+            width: 100%;
+            height: auto;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        .slogan {
+            font-style: italic;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section {
+            background: var(--clean-white);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .spec-card {
+            background: #f8fafc;
+            padding: 1rem;
+            border-left: 4px solid var(--primary-blue);
+            border-radius: 4px;
+        }
+        
+        /* NEW NUMBERS SECTION STYLING */
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        .number-card {
+            background: linear-gradient(135deg, var(--primary-blue), #13335c);
+            color: var(--clean-white);
+            padding: 2rem 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--accent-gold);
+        }
+        .number-stat {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent-gold);
+            margin: 0;
+            line-height: 1;
+        }
+        .number-label {
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+        .number-desc {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            margin-top: 0.25rem;
+        }
+
+        /* Mud Flap Display Styling */
+        .mudflap-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .mudflap {
+            width: 280px;
+            height: 380px;
+            background-color: #111111;
+            border-radius: 4px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-bottom: 12px solid #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 2px solid #222;
+        }
+        .mudflap-logo {
+            border: 2px solid var(--accent-gold);
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            width: 90%;
+        }
+        .mudflap-text-main {
+            color: var(--clean-white);
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .mudflap-text-sub {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 5px 0 0 0;
+            text-transform: uppercase;
+        }
+        .mudflap-slogan {
+            color: #888;
+            font-size: 0.75rem;
+            margin-top: 2rem;
+            text-align: center;
+            font-style: italic;
+        }
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: #000;
+            height: 250px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            opacity: 0.9;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(10, 35, 66, 0.85);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            font-size: 0.9rem;
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--clean-white);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            border-top: 3px solid var(--accent-gold);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="IMG_2330.jpeg" alt="Sullivan's Ventures Ltd. Logo">
+        <div class="logo-placeholder">
+            <img src="" alt="Sullivan's Ventures Ltd. Logo">
         </div>
-        <p>"Built for the Grades. Driven by Torque."</p>
+        <div class="slogan">"Built for the Grades. Driven by Torque."</div>
     </header>
 
     <div class="container">
-        <div class="card">
+        
+        <div class="section">
             <h2>Elite Log Transportation</h2>
-            <p>Based out of Cranbrook, B.C., Sullivan Ventures Ltd. provides professional, reliable heavy-haul log transportation across the Kootenays. Operating as a premier broker train, we specialize in moving raw timber safely out of severe-duty bush terrain directly to regional mills.</p>
+            <p>Based out of Cranbrook, B.C., Sullivan’s Ventures Ltd. provides professional, heavy-spec raw timber transportation safely out of severe bush blocks and mountain terrains.</p>
+            
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <strong>Powertrain:</strong> Cummins N14 High-Torque Power Plant
+                </div>
+                <div class="spec-card">
+                    <strong>Tractor Spec:</strong> Kenworth T800 Tri-Drive with Full Tri-Lockers
+                </div>
+                <div class="spec-card">
+                    <strong>Trailer Configuration:</strong> Heavy-Duty Quad-Axle Stinger Configuration
+                </div>
+                <div class="spec-card">
+                    <strong>Bunk Setup:</strong> Frame-Bolted Wide Truck Bunks for Short-Log Hauling
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>Rig Specifications & Capability</h2>
-            <ul>
-                <li><strong>Tractor:</strong> Kenworth T800 Tri-Drive (Full Lockers on All Axles)</li>
-                <li><strong>Powertrain:</strong> 600 HP Cummins N14 Swap & Eaton Fuller 18-Speed Manual</li>
-                <li><strong>Front Axle:</strong> Heavy-Duty Steer Setup for Mountain Support</li>
-                <li><strong>Trailer:</strong> Peerless Quad-Axle Stinger-Steer Pole Wagon (Low Mileage)</li>
-                <li><strong>Capacity:</strong> Configured for legal maximum payload long-log (Up to 20m wood)</li>
-            </ul>
+        <!-- NEW NUMBERS SECTION -->
+        <div class="section">
+            <h2>By the Numbers</h2>
+            <p>Heavy-spec capability built to move maximum legal payload across demanding forestry lease routes.</p>
+            <div class="numbers-grid">
+                <div class="number-card">
+                    <div class="number-stat">14L</div>
+                    <div class="number-label">Cummins N14 Block</div>
+                    <div class="number-desc">Legendary red-block torque rise for mountain climbing</div>
+                </div>
+                <div class="number-card">
+                    <div class="number-stat">3</div>
+                    <div class="number-label">Driven Axles</div>
+                    <div class="number-desc">Full tri-drive differential lockers for zero-slip bush traction</div>
+                </div>
+                <div class="number-card">
+                    <div class="number-stat">4</div>
+                    <div class="number-label">Trailer Axles</div>
+                    <div class="number-desc">Quad-axle stinger engineered for maximum weight distribution</div>
+                </div>
+                <div class="number-card">
+                    <div class="number-stat">6</div>
+                    <div class="number-label">Total Log Bunks</div>
+                    <div class="number-desc">2 wide frame-mounted & 4 standard trailer bunks for short wood</div>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>Secure a Broker Contract</h2>
-            <p>Looking to clear a deck or optimize your cycle times? Sullivan Ventures Ltd. works seamlessly with premier licensees including Ole Smokey Ventures and RGM.</p>
-            <a href="tel:12545550199" class="btn">📞 Call / Text Directly to Dispatch</a>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 Sullivan Ventures Ltd. | Cranbrook, British Columbia. All Rights Reserved.
-    </footer>
-
-</body>
-</html>
+        <div class="section">
+            <h2>Custom Fleet Mud Flaps</h2>
+            <p>Branded heavy-duty rubber protection designed to stay clean on muddy bush blocks and stand out on the highway.</p>
+            <div class="mudflap-container">
+                <div class="mudflap">
+                    <div class="mudflap-logo">
+                        <p class="mudflap-text-main">Sullivan's</p>
+                        <p class="mudflap-text-sub">Ventures Ltd.</p>
+                    </div>
+                    <p class="mudflap-slogan">Cranbrook, B.C.</p>
+                </div>
+                <div class="mudflap">
+                    <div class="mudflap-logo">
+                        <p class="mudflap-text-main">Sullivan's</p>
